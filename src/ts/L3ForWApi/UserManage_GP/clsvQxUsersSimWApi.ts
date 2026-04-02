@@ -37,7 +37,7 @@ import {
   ObjectAssign,
 } from '@/ts/PubFun/clsCommFunc4Web';
 import { clsvQxUsersSimEN } from '@/ts/L0Entity/UserManage_GP/clsvQxUsersSimEN';
-import { clsSysPara4WebApi, GetWebApiUrl } from '@/ts/PubConfig/clsSysPara4WebApi';
+import { clsSysPara4WebApi, GetWebApiUrl_GP } from '@/ts/PubConfig/clsSysPara4WebApi';
 import { stuTopPara } from '@/ts/PubFun/stuTopPara';
 import { stuRangePara } from '@/ts/PubFun/stuRangePara';
 import { clsDateTime } from '@/ts/PubFun/clsDateTime';
@@ -62,7 +62,7 @@ export async function vQxUsersSim_GetObjByUserIdAsync(
     throw strMsg;
   }
   const strAction = 'GetObjByUserId';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -518,7 +518,7 @@ export async function vQxUsersSim_GetFldValueAsync(
 ): Promise<Array<string>> {
   const strThisFuncName = 'GetFldValueAsync';
   const strAction = 'GetFldValue';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -579,7 +579,7 @@ export async function vQxUsersSim_GetFldValueAsync(
 export async function vQxUsersSim_GetFirstIDAsync(strWhereCond: string): Promise<string> {
   const strThisFuncName = 'GetFirstIDAsync';
   const strAction = 'GetFirstID';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -638,7 +638,7 @@ export async function vQxUsersSim_GetFirstIDAsync(strWhereCond: string): Promise
 export async function vQxUsersSim_GetFirstID(strWhereCond: string) {
   const strThisFuncName = 'GetFirstID';
   const strAction = 'GetFirstID';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -699,7 +699,7 @@ export async function vQxUsersSim_GetFirstObjAsync(
 ): Promise<clsvQxUsersSimEN | null> {
   const strThisFuncName = 'GetFirstObjAsync';
   const strAction = 'GetFirstObj';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -883,7 +883,7 @@ export async function vQxUsersSim_GetObjLstAsync(
 ): Promise<Array<clsvQxUsersSimEN>> {
   const strThisFuncName = 'GetObjLstAsync';
   const strAction = 'GetObjLst';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -1167,7 +1167,7 @@ export async function vQxUsersSim_GetObjLstByUserIdLstAsync(
 ): Promise<Array<clsvQxUsersSimEN>> {
   const strThisFuncName = 'GetObjLstByUserIdLstAsync';
   const strAction = 'GetObjLstByUserIdLst';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -1264,7 +1264,7 @@ export async function vQxUsersSim_GetTopObjLstAsync(
 ): Promise<Array<clsvQxUsersSimEN>> {
   const strThisFuncName = 'GetTopObjLstAsync';
   const strAction = 'GetTopObjLst';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -1334,7 +1334,7 @@ export async function vQxUsersSim_GetObjLstByRangeAsync(
 ): Promise<Array<clsvQxUsersSimEN>> {
   const strThisFuncName = 'GetObjLstByRangeAsync';
   const strAction = 'GetObjLstByRange';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -1503,7 +1503,7 @@ export async function vQxUsersSim_IsExistRecordCache(objvQxUsersSimCond: Conditi
 export async function vQxUsersSim_IsExistRecordAsync(strWhereCond: string): Promise<boolean> {
   const strThisFuncName = 'IsExistRecordAsync';
   const strAction = 'IsExistRecord';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -1593,7 +1593,7 @@ export async function vQxUsersSim_IsExistAsync(strUserId: string): Promise<boole
   const strThisFuncName = 'IsExistAsync';
   //检测记录是否存在
   const strAction = 'IsExist';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
@@ -1652,7 +1652,7 @@ export async function vQxUsersSim_IsExistAsync(strUserId: string): Promise<boole
 export async function vQxUsersSim_GetRecCountByCondAsync(strWhereCond: string): Promise<number> {
   const strThisFuncName = 'GetRecCountByCondAsync';
   const strAction = 'GetRecCountByCond';
-  const strUrl = GetWebApiUrl(vQxUsersSim_Controller, strAction);
+  const strUrl = GetWebApiUrl_GP(vQxUsersSim_Controller, strAction);
 
   const token = Storage.get(ACCESS_TOKEN_KEY);
   //console.error('token:', token);
